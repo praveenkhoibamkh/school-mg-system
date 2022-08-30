@@ -3,12 +3,6 @@ from rest_framework.response import Response
 
 from src.accounts.serializers import RegistrationSerializer, UserSerializer
 
-# Create your views here.
-# class AccountTokenPairView(TokenObtainPairView):
-#     permission_classes = (AllowAny,)
-#     serializer_class = AccountTokenPairSerializer
-
-
 class RegistrationView(generics.GenericAPIView):
     serializer_class = RegistrationSerializer
 

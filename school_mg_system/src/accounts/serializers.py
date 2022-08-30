@@ -28,12 +28,3 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = "__all__"
-
-
-class AccountTokenPairSerializer(TokenObtainPairSerializer):
-    @classmethod
-    def get_token(cls, user):
-        token = super(AccountTokenPairSerializer, cls).get_token(user)
-
-        token["username"] = user.username
-        return token
